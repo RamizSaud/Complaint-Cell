@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/issueComplaint.css">
+    <script src="scripts/issueComplaint.js" defer></script>
+    <title>Issue Complaint</title>
+    <link rel="icon" href="images/main_icon.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="LOGO">
+                <h1>GIK Institute Complaint Cell</h1>
+            </div>
+            <ul class="navbar-list st-list">
+                <% if (locals.rector) { %> 
+                    <li><a href="\dashboard">Dash Board</a></li>
+                <% } %> 
+                <% if (locals.userType) { %> 
+                    <li><a href="\receivedComplaints">Complaints Received</a></li>
+                <% } %> 
+                <li><a href="\sentComplaints">Complaints Sent</a></li>
+                <li><a href="\logout">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-f">
+        <div class="form-container" id="form-con">
+            <h2 class="form-heading">Issue Complaint</h2>
+            <form class="t-form">
+                <select name="type" id="type">
+                    <option value="faculty_member">Faculty Member</option>
+                    <option value="staff">Staff</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <select name="fac" id="faculty">
+                    <option value="instructor">Instructor</option>
+                    <option value="dean">Dean</option>
+                    <option value="technical">Technical Member</option>
+                    <option value="advisor">Advisor</option>
+                </select>
+                <select name="staff" id="staff">
+                    <option value="warden">Warden</option>
+                    <option value="mess">Mess Staff</option>
+                    <option value="maintenance">Maintenance Staff</option>
+                    <option value="technical">Technical Staff</option>
+                    <option value="security">Security Guard</option>
+                </select>
+                <select name="admin" id="admin">
+                    <option value="rector">Rector</option>
+                    <option value="finance">Finance</option>
+                    <option value="student affair">Student Affair</option>
+                    <option value="admission">Admission</option>
+                    <option value="examination">Examination</option>
+                    <option value="supervisor">Supervisor</option>
+                </select>
+            </form>
+            <div id="options-aval"></div>
+            <form class="c-form" id="c-form">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" class="write">
+                <label for="detail">Detail</label>
+                <textarea name="" id="detail" cols="30" rows="10" class="write"></textarea>
+                <h3>Urgency</h3>
+                <div class="urgency" id="urgency">
+                    <input type="radio" name="urgent" value="urgent">
+                    <label for="">Urgent</label>
+                    <input type="radio" name="urgent" value="not urgent">
+                    <label for="">Not Urgent</label>
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+        <h3 id="com-sent">Complaint Sent</h3>
+    </main>
+</body>
+</html>

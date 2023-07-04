@@ -1,0 +1,130 @@
+body {
+    background-color: #cfeac5;
+}
+
+main {
+    text-align: center;
+    height: 100vh;
+}
+
+main h1 {
+    margin-top: 0;
+    margin-left: 3.5rem;
+    font-size: 3rem;
+}
+
+.big-form {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.as {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.as h2 {
+    margin-right: -4rem;
+}
+
+.btn {
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    background-color: #006E72;
+    color: white;
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10%;
+    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.9);
+}
+
+.mar {
+    margin-right: 4rem;
+    border: transparent;
+    cursor: pointer;
+}
+
+.mar:hover {
+    transform: scale(1.05);
+}
+
+.as span {
+    display: none;
+}
+
+.as-list {
+    margin: auto;
+    text-align: center;
+    width: 10rem;
+    color: white;
+}
+
+.as-list li {
+    background-color: #006E72;
+    margin-bottom: 0.75rem;
+    width: 10rem;
+    padding: 0.5rem;
+    border-radius: 10%;
+    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.9);
+}
+
+.as-list li:hover {
+    transform: scale(1.05);
+    transition-duration: 0.25s;
+    cursor: pointer;
+}
+
+form {
+    border-radius: 10%;
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 30rem;
+    margin: auto;
+    margin-left: 26.25rem;
+}
+
+form input {
+    width: 20rem;
+    margin: 2rem;
+    margin-top: 1rem;
+    height: 2rem;
+    border-radius: 7%;
+    border: 0.10rem solid rgba(0,0,0,0.5);
+    box-shadow: 0.5px 0.5px 7px 0.25px rgba(0,0,0,0.9);
+    font-size: 1.25rem;
+    padding-left: 0.5rem;
+    background-color: rgb(220, 219, 219);
+}
+
+form label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@keyframes wobble {
+    0% { transform: translateY(15%); } 
+    15% { transform: translateY(-15%); } 
+    30% { transform: translateY(15%); } 
+    45% { transform: translateY(-15%); } 
+    60% { transform: translateY(15%) }
+    75% { transform: translateY(-15%); }
+    100% { transform: translateY(15%); } 
+} 
+
+#correction {
+    background-color: rgb(234, 154, 207);
+    width: 15rem;
+    padding: 0.5rem 2rem;
+    border-radius: 10%;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    color: rgb(79, 78, 78);
+    box-shadow: 0px 2px 8px 2px rgba(232, 32, 32,0.3);
+    animation: wobble 7s;
+    animation-iteration-count: infinite; 
+    display: none;
+}

@@ -1,0 +1,165 @@
+body {
+    font-family: 'Open Sans';
+    color: #3f4441;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    background-color: rgba(29, 170, 118, 0.93);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+}
+
+.logo h1 {
+    margin: auto;
+}
+
+.navbar img {
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem;
+}
+
+.navbar-list {
+    width: 18rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 2rem;
+    font-size: 1.25rem;
+}
+
+.navbar-list li {
+    background-color: #cfeac5;
+    padding: 0.5rem 1.25rem;
+    border-radius: 10%;
+    margin-left: 1rem;
+}
+
+.navbar-list li:hover {
+    background-color: #006E72;
+    color: white;
+    cursor: pointer;
+}
+
+.head-img {
+    background-image: linear-gradient(40deg, transparent, rgba(29, 170, 118, 0.93) 80%), url('/images/main.png');
+    height: 75vh;
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.head-img h2 {
+    margin: 0;
+    margin-left: 55rem;
+    padding-top: 5rem;
+    font-size: 4rem;
+    width: 20rem;
+}
+
+.desc-1 {
+    margin-top: 5rem;
+    display: flex;
+    margin-right: 5rem;
+}
+
+.description-1 {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+}
+
+.desc-2 {
+    margin-left: 10rem;
+    text-align: right;
+}
+
+.about {
+    text-align: center;
+    margin: auto;
+    margin-top: 5rem;
+    width: 50rem;
+}
+
+footer {
+    /*background-color: #008C78;*/
+    background-color: rgba(29, 170, 118, 0.93);
+    color: #242424;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.web {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: 3.5rem;
+}
+
+.web img {
+    width: 15rem;
+    margin-bottom: 3rem;
+    box-shadow: 5px 5px 5px 1px #212121;
+}
+
+.web img:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.contact {
+    margin-top: 3rem;
+    margin-left: 4rem;
+    width: 15rem;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.icon img {
+    height: 2rem;
+}
+
+.icon img:hover {
+    transform: scale(1.2);
+}
+
+.icon h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.list2 {
+    margin: 0;
+    margin-right: 4rem;
+    margin-top: 2rem;
+}
+
+.list2 li {
+    margin: 1rem;
+    text-align: center;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="icon" href="images/main_icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="scripts/chart.js" defer></script>
+    <title>Dash Board</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="LOGO">
+                <h1>GIK Institute Complaint Cell</h1>
+            </div>
+            <ul class="navbar-list st-list">
+                <li><a href="\issueComplaint">Issue Complaint</a></li>
+                <li><a href="\receivedComplaints">Complaints Received</a></li>
+                <li><a href="\sentComplaints">Complaints Sent</a></li>
+                <li><a href="\logout">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="dash-heading">Dash Board</h1>
+    <main>
+        <div class="com-info">
+            <ul class="info">
+                <li>
+                    <div class="info-back">
+                        <h3>Total Complaints</h3>
+                        <h4><%= total_complaints.total_complaints %></h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-back">
+                        <h3>Pending Complaints</h3>
+                        <h4><%= pending_complaints.pending_complaints %></h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-back">
+                        <h3>Resolved Complaints</h3>
+                        <h4><%= resolved_complaints.resolved_complaints %></h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h3 id="show-graph">Show Visualization</h3>
+        <div class="main-charts" id="main-charts">
+            <div class="chart">
+                <canvas id="avg-sat"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="per-rec"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="per-sen"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="per-ur"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="per-day"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="per-month"></canvas>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

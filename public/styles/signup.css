@@ -1,0 +1,130 @@
+form {
+    width: 50rem;
+    margin: auto;
+    margin-left: 17rem;
+}
+
+input[type=radio] {
+    width: fit-content;
+    height: fit-content;
+    transform: scale(2);
+    box-shadow: none;
+    margin-right: 1rem;
+    accent-color: #006E72;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: none;
+}
+
+.faculty {
+    display: grid;
+    grid-template-columns: 5rem 5rem 5rem 5rem 5rem 5rem;
+    width: 30rem;
+    margin-bottom: 2rem;
+    display: none;
+}
+
+.faculty label {
+    padding-right: 2rem;
+}
+
+.faculty input {
+    margin: auto;
+}
+
+.staff-type {
+    display: grid;
+    width: 30rem;
+    grid-template-columns: 5rem 10rem 5rem 10rem;
+    margin-bottom: 5rem;
+    display: none;
+}
+
+.staff-type label {
+    width: 10rem;
+}
+
+.fac-type {
+    display: grid;
+    width: 30rem;
+    grid-template-columns: 5rem 10rem 5rem 10rem;
+    margin-bottom: 5rem;
+    display: none;
+}
+
+.admin-type {
+    display: grid;
+    width: 30rem;
+    grid-template-columns: 5rem 10rem 5rem 10rem;
+    margin-bottom: 5rem;
+    display: none;
+}
+
+.batch {
+    display: none;
+    margin-bottom: 2rem;
+}
+
+.regno {
+    display: none;
+}
+
+.room-no {
+    display: none;
+}
+
+.hostel {
+    display: none;
+}
+
+
+@keyframes wobble {
+    0% { transform: translateY(15%); } 
+    15% { transform: translateY(-15%); } 
+    30% { transform: translateY(15%); } 
+    45% { transform: translateY(-15%); } 
+    60% { transform: translateY(15%) }
+    75% { transform: translateY(-15%); }
+    100% { transform: translateY(15%); } 
+} 
+
+#correction {
+    background-color: rgb(234, 154, 207);
+    width: 15rem;
+    padding: 0.5rem 2rem;
+    border-radius: 10%;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    color: rgb(79, 78, 78);
+    box-shadow: 0px 2px 8px 2px rgba(232, 32, 32,0.3);
+    animation: wobble 7s;
+    animation-iteration-count: infinite;
+    display: none;
+}
+
+@keyframes wobble-acc {
+    0% { transform: translateY(-200%); } 
+    10% { transform: translateY(-180%); }
+    20% { transform: translateY(-160%); }
+    30% { transform: translateY(-140%); }
+    40% { transform: translateY(-120%); }
+    50% { transform: translateY(-100%); } 
+    60% { transform: translateY(-80%); }
+    70% { transform: translateY(-60%) }
+    80% { transform: translateY(-40%); }
+    90% { transform: translateY(-20%); }
+    100% { transform: translateY(0%); } 
+}
+
+#create-acc {
+    background-color: #8cdc9b;
+    width: 20rem;
+    margin-left: 39%;
+    padding: 1rem;
+    border-radius: 10%;
+    box-shadow: 0px 2px 8px 8px rgba(16, 231, 20, 0.3);
+    animation: wobble-acc 0.5s;
+}

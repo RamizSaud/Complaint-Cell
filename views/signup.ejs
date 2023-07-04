@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/signup.css">
+    <script src="scripts/signup.js" defer></script>
+    <title>Sign up</title>
+    <link rel="icon" href="images/main_icon.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="LOGO">
+                    <h1>GIK Institute Complaint Cell</h1>
+                </div>
+                <ul class="navbar-list">
+                    <li><a href="/">Main page</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <main>
+        <div class="big-form">
+            <h1>Sign Up</h1>
+            <div class="as" id="as">
+                <h2>Sign Up AS</h2>
+                <span class="btn" id="type-selected"></span>
+                <ul class="as-list" id="options">
+                    <li>Student</li>
+                    <li>Faculty Member</li>
+                    <li>Staff</li>
+                    <li>Administrator</li>
+                </ul>
+            </div>
+            <form id="show-form">
+                <label for="regno" id="l-regno" class="regno">Registration Number</label>
+                <input type="number" name="regno" id="regno" class="regno" min="2019000" max="2022999">
+                <label for="name" id="l-name">Name</label>
+                <input type="text" name="name" id="name" required>
+                <p id="l-faculty">Faculty</p>
+                <div class="faculty" id="faculty">
+                    <input type="radio" name="fac" value="AI">
+                    <label for="AI">AI</label>
+                    <input type="radio" name="fac" value="CS">
+                    <label for="CS">CS</label>
+                    <input type="radio" name="fac" value="CE">
+                    <label for="CE">CE</label>
+                    <input type="radio" name="fac" value="CME">
+                    <label for="CME">CME</label>
+                    <input type="radio" name="fac" value="CVE">
+                    <label for="CVE">CVE</label>
+                    <input type="radio" name="fac" value="CYS">
+                    <label for="CYS">CYS</label>
+                    <input type="radio" name="fac" value="DS">
+                    <label for="DS">DS</label>
+                    <input type="radio" name="fac" value="EEE">
+                    <label for="EEE">EEE</label>
+                    <input type="radio" name="fac" value="EEP">
+                    <label for="EEP">EEP</label>
+                    <input type="radio" name="fac" value="ME">
+                    <label for="ME">ME</label>
+                    <input type="radio" name="fac" value="MGS">
+                    <label for="MGS">MGS</label>
+                    <input type="radio" name="fac" value="MTM">
+                    <label for="MTM">MTM</label>
+                    <input type="radio" name="fac" value="MTN">
+                    <label for="MTN">MTN</label>
+                </div>
+                <p id="l-type">Types</p>
+                <div class="staff-type" id="staff-type">
+                    <input type="radio" name="staff" value="warden">
+                    <label for="">Warden</label>
+                    <input type="radio" name="staff" value="mess">
+                    <label for="">Mess Staff</label>
+                    <input type="radio" name="staff" value="maintenance">
+                    <label for="">Maintenance Staff</label>
+                    <input type="radio" name="staff" value="technical">
+                    <label for="">Technical Staff</label>
+                    <input type="radio" name="staff" value="security">
+                    <label for="">Security Guard</label>
+                </div>
+                <div class="fac-type" id="fac-type">
+                    <input type="radio" name="faculty" value="instructor">
+                    <label for="">Instructor</label>
+                    <input type="radio" name="faculty" value="dean">
+                    <label for="">Dean</label>
+                    <input type="radio" name="faculty" value="technical">
+                    <label for="">Technical Member</label>
+                    <input type="radio" name="faculty" value="advisor">
+                    <label for="">Advisor</label>
+                </div>
+                <div class="batch" id="batch">
+                    <p id="l-batch">Batch</p>
+                    <input type="radio" name="batch" value="29">
+                    <label for="29">29</label>
+                    <input type="radio" name="batch" value="30">
+                    <label for="30">30</label>
+                    <input type="radio" name="batch" value="31">
+                    <label for="31">31</label>
+                    <input type="radio" name="batch" value="32">
+                    <label for="32">32</label>
+                </div>
+                <div class="admin-type" id="admin-type">
+                    <input type="radio" name="admin" value="rector">
+                    <label for="">Rector</label>
+                    <input type="radio" name="admin" value="finance">
+                    <label for="">Finance</label>
+                    <input type="radio" name="admin" value="student affair">
+                    <label for="">Student Affair</label>
+                    <input type="radio" name="admin" value="admission">
+                    <label for="">Admission</label>
+                    <input type="radio" name="admin" value="examination">
+                    <label for="">Examination</label>
+                    <input type="radio" name="admin" value="supervisor">
+                    <label for="">Supervisor</label>
+                </div>
+                <label for="room-no" id="l-room-no" class="room-no">Room Number</label>
+                <input type="number" name="room-no" id="room-no" class="room-no" min="1" max="120">
+                <label for="hostel" id="l-hostel" class="hostel">Hostel</label>
+                <input type="number" name="hostel" id="hostel" class="hostel" min="1" max="12">
+                <label for="user-name">User Name</label>
+                <input type="text" name="user-name" id="user-name" required>
+                <h4 id="correction">THIS USERNAME ALREADY EXISTS</h4>
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="password" required>
+                <button class="btn mar">Submit</button>
+            </form>
+            <p id="create-acc">User Accout Created</p>
+        </div>
+    </main>
+</body>
+</html>

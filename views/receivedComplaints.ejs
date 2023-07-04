@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/issueComplaint.css">
+    <link rel="stylesheet" href="styles/receivedComplaints.css">
+    <script src="scripts/receivedComplaints.js" defer></script>
+    <title>Complaint Received</title>
+    <link rel="icon" href="images/main_icon.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="LOGO">
+                <h1>GIK Institute Complaint Cell</h1>
+            </div>
+            <ul class="navbar-list st-list">
+                <% if (locals.rector) { %> 
+                    <li><a href="\dashboard">Dash Board</a></li>
+                <% } %> 
+                <li><a href="\issueComplaint">Issue Complaint</a></li>
+                <li><a href="\sentComplaints">Complaints Sent</a></li>
+                <li><a href="\logout">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="com-heading">Received Complaints</h1>
+        <div class="com-container">
+            <% for (let complaint of complaints) { %>
+                <div class="com" id="<%= complaint.complaint_id %>">
+                    <h2>Subject: <%=complaint.subject%></h2>
+                    <p><%= complaint.detail %></p>
+                    <% if (complaint.status)  {%> 
+                        <h5>Status: <%= complaint.status %></h5>
+                    <% } %>
+                    <% if (complaint.satisfaction)  {%>  
+                        <h5>Satisfaction: <%= complaint.satisfaction %></h5>
+                    <% } %>
+                    <% if (complaint.urgency=='urgent') { %> 
+                        <h5 class="ur"><%= complaint.urgency %></h5>
+                    <% } %>
+                    <h5>Sent by: <%= complaint.name %> (<%= complaint.regno %><%= complaint.type %>)</h5>
+                    <h5>Sent On: <%= complaint.start_date %></h5>
+                    <% if (complaint.end_time)  {%> 
+                        <h5>Finished On: <%= complaint.end_date %></h5>
+                    <% } %>
+                    <% if (complaint.status=='complete') { %> 
+                        <h3 class="completed">Complaint Resolved</h3>
+                    <% } %> 
+                    <% if (complaint.status=='not complete') { %> 
+                        <h3 class="complete">Completed?</h3>
+                    <% } %> 
+                </div>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>

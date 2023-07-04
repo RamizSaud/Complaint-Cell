@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <script src="scripts/login.js" defer></script>
+    <title>Login</title>
+    <link rel="icon" href="images/main_icon.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="LOGO">
+                    <h1>GIK Institute Complaint Cell</h1>
+                </div>
+                <ul class="navbar-list">
+                    <li><a href="/">Main page</a></li>
+                    <li><a href="/signup">Sign up</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <main>
+        <div class="big-form">
+            <h1>LOGIN</h1>
+            <div class="as" id="as">
+                <h2>LOGIN AS</h2>
+                <span class="btn"></span>
+                <ul class="as-list" id="options">
+                    <li>Student</li>
+                    <li>Faculty Member</li>
+                    <li>Staff</li>
+                    <li>Administrator</li>
+                </ul>
+            </div>
+            <form id="show-form">
+                <label for="user-name">User Name</label>
+                <input type="text" name="user-name" id="user-name">
+                <label for="password">Password</label>
+                <input type="password" name="pass" id="password">
+                <h4 id="correction">Invalid Credentials</h4>
+                <button class="btn mar">Submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
